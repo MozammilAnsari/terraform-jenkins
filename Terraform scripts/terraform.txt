@@ -1,0 +1,23 @@
+Prerequsist for creating resources
+
+1. First you need to initialize the terraform for a specefic module.
+2. Then create the main.tf file
+3. Inside the main file write the resources to deploy
+
+Note - Never delete files created by terraform if you delete the files then terraform 
+is not able to destroy your resources created by you.
+
+different files in terraform.
+
+main.tf: This is the main configuration file where the primary resources are defined.
+variables.tf: This file contains input variables to parameterize your configuration.
+outputs.tf: This file defines outputs to extract and use the infrastructure details after deployment.
+provider.tf: This file configures the provider (AWS in this case).
+iam.tf: This file contains IAM roles and policies necessary for the pipeline to operate.
+pipeline.tf: This file contains the configuration for CodePipeline, CodeBuild, and CodeDeploy.
+backend.tf: (optional) This file configures the remote backend for storing the Terraform state.
+
+4. terraform plan gives you the overview of your resources before going to deploy
+5. Cleaning the resources run $ terraform destroy
+to delete all resources which is created using terraform in respective module.
+
